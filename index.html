@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>CSP Trusted Types Lab</title><link rel="stylesheet" href="styles.css"/></head>
+<body><header><h1>CSP Trusted Types Lab</h1><p id="status">boot</p></header>
+<main><section><textarea id="payload" rows="10" placeholder="paste HTML payload"></textarea><div id="preview"></div></section>
+<aside id="controls">
+<label><input type="checkbox" data-key="scriptSelf" checked/> script-src 'self'</label>
+<label><input type="checkbox" data-key="objectNone" checked/> object-src 'none'</label>
+<label><input type="checkbox" data-key="requireTT"/> require-trusted-types-for 'script'</label>
+<button id="btn-sanitize" type="button">Sanitize</button>
+<button id="btn-assign" type="button">Try Assign</button>
+<pre id="csp-output"></pre><pre id="stats"></pre>
+</aside></main>
+<script type="module" src="src/main.js"></script></body></html>
